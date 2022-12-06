@@ -4,7 +4,6 @@ class Ball {
         this.y = y;
         this.dx = 4;
         this.dy = -4;
-
         this.radius = 10;
     }
     update(interval) {
@@ -22,8 +21,6 @@ class Ball {
             }, 2000);
             clearInterval(interval)
         }
-
-        
     }
     draw(ctx) {
         ctx.beginPath();
