@@ -15,11 +15,27 @@ class Ball {
         if (this.y + this.dy < this.radius) {
             this.dy = -this.dy;
         } else if (this.y + this.dy > canvas.height - this.radius) {
-            document.getElementById('alert').innerText = "GameOver";
-            setTimeout(() => {
-                document.location.reload();
-            }, 2000);
-            clearInterval(interval)
+
+            if (this.x <= PADDLE.x + PADDLE.width + this.radius && this.x >= PADDLE.x - this.radius) {
+                if (this.x > PADDLE.x + PADDLE.width/2) {
+                    if (this.dx < 0) {
+                        this.dx = -this.dx;
+                    }
+                } else if (this.x < PADDLE.x + PADDLE.width/2) {
+                    if (this.dx > 0) {
+                        this.dx = -this.dx;
+                    }
+                } else {
+                    this.dx = 0;
+                }
+                this.dy = -this.dy;
+            } else {
+                document.getElementById('alert').innerText = "GameOver";
+                setTimeout(() => {
+                    document.location.reload();
+                }, 1550);
+                clearInterval(interval);
+            }
         }
     }
     draw(ctx) {

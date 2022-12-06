@@ -19,6 +19,10 @@ canvas {
     margin: 0 auto;
 }
 
+main {
+    position: relative;
+}
+
 #score-text {
     z-index: 2;
     color: white;
@@ -33,6 +37,7 @@ canvas {
 }
 
 #alert {
+    z-index: 4;
     color: red;
     position: absolute;
     top: 50%;

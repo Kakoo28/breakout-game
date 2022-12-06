@@ -8,7 +8,9 @@ class Paddle {
 
         this.controls = new Controls();
     }
-
+    follow() {
+        this.x = BALL.x - this.width/2
+    }
     update() {
         if (this.controls.left) {
             this.x = Math.max(this.x - this.speed, 0);

@@ -1,10 +1,12 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 let gameInterval;
+let score = 0;
+let level = 1;
 
-const PADDLE = new Paddle(10, 75);
+const PADDLE = new Paddle(10, 120);
 const BALL = new Ball(Math.floor(Math.random() * canvas.width), canvas.height - 30, 2, -2);
-const BRICK_FIELD = new BrickField(5, 15, 75, 20, 16, 30, 30);
+const BRICK_FIELD = new BrickField(5, 16, 75, 20, 10, 30, 30);
 
 
 function draw() {
