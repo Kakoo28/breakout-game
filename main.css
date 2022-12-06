@@ -4,16 +4,16 @@
 * {
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 
 body {
     background-color: rgb(15, 15, 15);
     font-family: 'Press Start 2P', cursive;
+    overflow: hidden;
+
 }
 
 canvas {
-    position: relative;
     background: rgb(35, 32, 32);
     display: block;
     margin: 0 auto;
@@ -23,7 +23,7 @@ canvas {
     z-index: 2;
     color: white;
     position: absolute;
-    bottom: 0;
+    bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -41,15 +41,3 @@ canvas {
     font-size: 5em;
     
 }
-
-/* .level-text {
-    color: white;
-    writing-mode: vertical-lr;
-    text-orientation:upright;
-    position:absolute;
-}
-
-canvas .level-text:first-child {
-    left: -300%;
-    top: 50%;
-} */

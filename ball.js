@@ -13,8 +13,14 @@ class Ball {
         if (this.x + this.dx > canvas.width - this.radius || this.x + this.dx < this.radius) {
             this.dx = -this.dx;
         }
-        if (this.y + this.dy > canvas.height - this.radius || this.y + this.dy < this.radius) {
+        if (this.y + this.dy < this.radius) {
             this.dy = -this.dy;
+        } else if (this.y + this.dy > canvas.height - this.radius) {
+            document.getElementById('alert').innerText = "GameOver";
+            setTimeout(() => {
+                document.location.reload();
+            }, 2000);
+            clearInterval(interval)
         }
 
         
