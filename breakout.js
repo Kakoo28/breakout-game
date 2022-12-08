@@ -1,3 +1,4 @@
+const auto = document.getElementById('select-auto'); auto.checked = false;
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 let gameInterval;
@@ -17,6 +18,7 @@ function draw() {
     BALL.update(gameInterval);
     PADDLE.update();
     BRICK_FIELD.collisionDetection();
+    if (auto.checked) PADDLE.follow();
 }
 
 gameInterval = setInterval(draw, 10);

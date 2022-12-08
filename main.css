@@ -46,3 +46,13 @@ main {
     font-size: 5em;
     
 }
+
+label {
+    position: relative;
+    color: white;
+    padding: 10px;
+}
+
+label input {
+    cursor: pointer;
+}
